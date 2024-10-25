@@ -1,0 +1,142 @@
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --card-bg: #fff;
+    --card-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --button-bg: #4CAF50;
+    --button-hover: #45a049;
+    --delete-button-bg: #ff4d4d;
+    --delete-button-hover: #ff3333;
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f4f4;
+    --card-bg: #2c2c2c;
+    --card-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    --button-bg: #45a049;
+    --button-hover: #4CAF50;
+    --delete-button-bg: #ff3333;
+    --delete-button-hover: #ff4d4d;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+#themeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h2 {
+    color: var(--text-color);
+}
+
+.expense-form, .dashboard, .expense-list {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: var(--card-shadow);
+    width: 30%;
+}
+
+.expense-form {
+    order: 2;
+}
+
+.dashboard {
+    order: 3;
+}
+
+.expense-list {
+    order: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+#expenseList {
+    list-style-type: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#expenseList li {
+    background: var(--card-bg);
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#expenseList li button {
+    background-color: var(--delete-button-bg);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#expenseList li button:hover {
+    background-color: var(--delete-button-hover);
+}
+
+#expenseChart {
+    width: 100%;
+    height: auto;
+}

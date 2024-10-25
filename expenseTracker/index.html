@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+        <button id="themeToggle"><i class="fas fa-moon"></i></button>
+    </header>
+    <div class="container">
+        <div class="expense-list">
+            <h2>Recent Expenses</h2>
+            <ul id="expenseList"></ul>
+        </div>
+        
+        <div class="expense-form">
+            <h2>Add Expense</h2>
+            <form id="expenseForm">
+                <input type="number" id="amount" placeholder="Amount (₹)" required>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="food">🍔 Food</option>
+                    <option value="clothes">👕 Clothes</option>
+                    <option value="entertainment">🎭 Entertainment</option>
+                    <option value="miscellaneous">📦 Miscellaneous</option>
+                </select>
+                <input type="text" id="remarks" placeholder="Remarks">
+                <button type="submit">Add Expense</button>
+            </form>
+        </div>
+
+        <div class="dashboard">
+            <h2>Expense Dashboard</h2>
+            <canvas id="expenseChart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
